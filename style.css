@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #c24de3;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -23,6 +23,16 @@ header {
     width: 100px;
     height: auto;
     margin-right: 15px;
+}
+
+.transparent-image {
+    opacity: 0.5;
+    /* 50% transparent */
+}
+
+.transparent-image:hover {
+    opacity: 0.8;
+    /* 80% transparent when hovered */
 }
 
 h1 {
