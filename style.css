@@ -7,32 +7,29 @@ body {
 }
 
 header {
-    text-align: center;
     background-color: #333;
     color: white;
+    text-align: center;
     padding: 20px 0;
 }
 
-.logo-container {
-    float: left;
-    width: 100px;
-    height: auto;
-    padding: 10px;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo-container img {
-    width: 100%;
+.header-content img {
+    width: 100px;
     height: auto;
+    margin-right: 15px;
 }
 
 h1 {
     font-size: 1.5em;
-    margin-left: 120px;
-    /* Adjust based on logo size */
 }
 
 main {
-    clear: both;
     padding: 20px;
 }
 
@@ -41,14 +38,21 @@ main {
     margin-bottom: 20px;
 }
 
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.benefits-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits-content ul {
+    float: left;
+    margin-right: 20px;
+}
+
+.benefits-content img {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
 }
 
 ul {
@@ -63,17 +67,29 @@ ul li {
     border: 1px solid #ddd;
 }
 
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
 @media screen and (max-width: 600px) {
-    .logo-container {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-content img {
+        margin-bottom: 10px;
+    }
+    .benefits-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .benefits-content ul {
         float: none;
-        margin: auto;
-    }
-    h1 {
-        margin-left: 0;
-        font-size: 1.2em;
-    }
-    .intro p,
-    .benefits ul {
-        text-align: justify;
     }
 }
